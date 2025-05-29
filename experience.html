@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Lewin Elep's portfolio, showcasing skills in software development, experience, and projects." />
+  <meta name="keywords" content="portfolio, software development, programming, web development, lewin elep" />
+  <title>Lewin Elep | Experience</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@50;100;200;300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--background); 
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+    }
+    .experience-content {
+      max-width: 700px;
+      margin: 0 auto;
+      padding-top: 200px;  
+      padding-bottom: 300px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .experience-content h1 {
+      font-size: 3.5rem;
+      font-weight: 200;
+      line-height: 1.2;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+    .experience-content h2 {
+      font-size: 2rem;
+      font-weight: 300;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+    .experience-content h3 {
+      font-size: 1.2rem;
+      font-weight: 200;
+      margin-bottom: 0.5rem;
+      text-align: left;
+      color: var(--highlight); 
+    }
+    .experience-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+    
+    .timeline-entry {
+      position: relative;
+      margin-bottom: 2.5rem;
+      padding-left: 60px; 
+    }
+       
+    .timeline-entry::before {
+      content: "";
+      position: absolute;
+      top: 18px;  
+      left: 5px; 
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #333; 
+      transition: all 0.3s ease;
+    }
+    
+    .timeline-entry.active::before {
+      top: 10px;             
+      left: 15px;        
+      width: 4px;         
+      height: 150px;       
+      border-radius: 2px;
+      background-color: #1E3A5F;  
+    }
+  </style>
+</head>
+<body>
+  
+  <header class="navbar">
+    <nav class="navbar-container">
+      <div class="navbar-links">
+        
+        <div class="nav-section">
+          <span class="nav-item">Navigation</span>
+          <ul class="dropdown-menu">
+            <li><a href="index.html#home">Landing Page</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="skills.html#skills">Skills</a></li>
+            <li><a href="projects.html#projects">Projects</a></li>
+            <li><a href="contact.html#contact">Contact Me</a></li>
+          </ul>
+        </div>
+        
+        <div class="nav-section">
+          <span class="nav-item">Social</span>
+          <ul class="dropdown-menu">
+            <li><a href="https://github.com/">Github</a></li>
+            <li><a href="https://linkedin.com/">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <div class="experience-content">
+    <h1 id="experience">Experience</h1>
+    
+    <div class="timeline-entry" id="entry-1">
+      <h2>Tutor.com – Remote</h2>
+      <h3>C++ Tutor | July 2024 – October 2024</h3>
+      <p>
+        Provided one-on-one tutoring to students in C++.<br>
+        Tailored lessons to individual learning styles and academic goals.<br>
+        Assisted with assignments, exam preparation, and coding challenges.
+      </p>
+    </div>
+    
+    <div class="timeline-entry" id="entry-2">
+      <h2>Sun Devil Satellite Lab – Tempe, AZ</h2>
+      <h3>Software Team | January 2024 – Present</h3>
+      <p>
+        Programmed Arduino to interface with sensors for a CubeSat project.<br>
+        Conducted LoRa radio testing and supported Helmholtz Cage development for magnetic calibration.<br>
+        Collaborated in an Agile team to test embedded software for satellite communication.
+      </p>
+    </div>
+    
+    <div class="timeline-entry" id="entry-3">
+      <h2>Virginia Mason Franciscan Health – Tacoma, WA</h2>
+      <h3>COVID Screener | July 2022 – August 2022</h3>
+      <p>
+        Ensured the safety and well-being of patients, visitors, and staff by conducting health screenings at facility entrances.<br>
+        Maintained a calm and professional demeanor in a fast-paced healthcare environment.
+      </p>
+    </div>
+    
+    <h2>Projects</h2>
+    <div class="timeline-entry" id="entry-4">
+      <h3>Node-JS Chatbot, Personal Project</h3>
+      <p>
+        Built a chatbot using Node.js integrated with the ChatGPT API for real-time conversation.<br>
+        Developed a clean front-end in HTML with dynamic interaction and a chatbot UI.<br>
+        Implemented back-end logic for prompt handling, API calls, and async responses.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      $(".navbar a").click(function(e) {
+        const target = $(this).attr("href");
+        if (target.startsWith("#")) {
+          e.preventDefault();
+          $("html, body").animate({
+            scrollTop: $(target).offset().top - 70
+          }, 800);
+        }
+      });
+    });
+
+    window.addEventListener('load', function() {
+      if (window.location.hash) {
+        const targetID = window.location.hash.substring(1);
+        const targetElement = document.getElementById(targetID);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const entries = Array.from(document.querySelectorAll('.timeline-entry'));
+      let offsets = [];
+
+      function updateOffsets() {
+        offsets = entries.map(entry => entry.offsetTop);
+      }
+      updateOffsets();
+      window.addEventListener('resize', updateOffsets);
+
+      window.addEventListener('scroll', function() {
+        const scrollPos = window.pageYOffset + (window.innerHeight / 2);
+        let activeIndex = 0;
+        for (let i = 0; i < offsets.length; i++) {
+          if (scrollPos >= offsets[i]) {
+            activeIndex = i;
+          }
+        }
+        if (activeIndex >= entries.length) activeIndex = entries.length - 1;
+        entries.forEach(e => e.classList.remove('active'));
+        entries[activeIndex].classList.add('active');
+      });
+    });
+  </script>
+</body>
+
+<script>
+    const navSections = document.querySelectorAll('.nav-section');
+    navSections.forEach(section => {
+      let timeout;
+      section.addEventListener('mouseenter', () => {
+        clearTimeout(timeout);
+        section.querySelector('.dropdown-menu').style.opacity = '1';
+        section.querySelector('.dropdown-menu').style.transform = 'translateX(-50%) translateY(0)';
+        section.querySelector('.dropdown-menu').style.pointerEvents = 'auto';
+      });
+      section.addEventListener('mouseleave', () => {
+        timeout = setTimeout(() => {
+          section.querySelector('.dropdown-menu').style.opacity = '0';
+          section.querySelector('.dropdown-menu').style.transform = 'translateX(-50%) translateY(-10px)';
+          section.querySelector('.dropdown-menu').style.pointerEvents = 'none';
+        }, 100);
+      });
+    });
+  </script>
+</html>
