@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lewin Elep's portfolio, showcasing skills in software development, experience, and projects." />
+    <meta name="keywords" content="portfolio, software development, programming, web development, lewin elep" />
+    <title>Lewin Elep | Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@50;100;200;300&display=swap" rel="stylesheet"/>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <nav class="navbar-container">
+            <div class="navbar-links">
+                <div class="nav-section">
+                    <span class="nav-item">Navigation</span>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#home">Landing Page</a></li>
+                        <li><a href="experience.html#experience">Experience</a></li>
+                        <li><a href="skills.html#skills">Skills</a></li>
+                        <li><a href="projects.html#projects">Projects</a></li>
+                        <li><a href="contact.html#contact">Contact Me</a></li>
+                    </ul>
+                </div>
+                <div class="nav-section">
+                    <span class="nav-item">Social</span>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://github.com/">Github</a></li>
+                        <li><a href="https://linkedin.com/">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="projects">
+        <section class="projects-section">
+            <h1 class="section-title">Projects</h1>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images\GPTicon.jpg" alt="Project screenshot">
+                </div>
+                <div class="project-description">
+                    <h2>Node-JS Chatbot</h2>
+                    <p>Chatbot using Node.js and ChatGPT API for real-time coversation</p>
+                    <p>Developed front-end in HTML with dynamic interaction and chatot UI</p>
+                    <p>Implemented back-end logic for prompt handling, API calls, and async responses</p>
+                    <a href="https://github.com/lewine/Node-JS-Chatbot" target="_blank" class="btn">Github</a>
+                </div>
+
+                <div class="project-video-container">
+                    <h3>Project Tutorial</h3>
+                    <div class="video-wrapper">
+                      <video width="560" height="315" controls>
+                        <source src="images\GPTprojectvid.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                </div>                                    
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const navSections = document.querySelectorAll('.nav-section');
+        navSections.forEach(section => {
+            let timeout;
+            section.addEventListener('mouseenter', () => {
+                clearTimeout(timeout);
+                section.querySelector('.dropdown-menu').style.opacity = '1';
+                section.querySelector('.dropdown-menu').style.transform = 'translateX(-50%) translateY(0)';
+                section.querySelector('.dropdown-menu').style.pointerEvents = 'auto';
+            });
+            section.addEventListener('mouseleave', () => {
+                timeout = setTimeout(() => {
+                    section.querySelector('.dropdown-menu').style.opacity = '0';
+                    section.querySelector('.dropdown-menu').style.transform = 'translateX(-50%) translateY(-10px)';
+                    section.querySelector('.dropdown-menu').style.pointerEvents = 'none';
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>
