@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx
 import React, { useState, useRef, useEffect } from 'react';
 
 function NavSection({ title, links }) {
@@ -17,7 +16,7 @@ function NavSection({ title, links }) {
   function handleMouseLeave() {
     timerRef.current = setTimeout(() => {
       setIsOpen(false);
-    }, 300); // 300ms delay before hiding
+    }, 300); 
   }
 
   return (

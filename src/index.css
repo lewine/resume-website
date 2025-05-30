@@ -416,21 +416,19 @@
     color: var(--text);
   }
 
-  /* Match your other section headings */
   .contact-title {
     font-family: 'Poppins', sans-serif;
-    font-weight: 200;      /* same as other H1s */
-    font-size: 4rem;       /* or 3.5rem if you prefer */
+    font-weight: 200;     
+    font-size: 4rem;      
     margin-bottom: 2rem;
   }
 
-  /* Inputs, textarea, labels, and button text */
   .contact-form label,
   .contact-form input,
   .contact-form textarea,
   .contact-form button {
-    font-family: inherit;   /* inherits Poppins */
-    font-weight: 300;       /* match your body copy weight */
+    font-family: inherit;   
+    font-weight: 300;      
     font-size: 1rem;
   }
 

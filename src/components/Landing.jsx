@@ -1,4 +1,3 @@
-// src/components/Landing.jsx
 import { useEffect } from 'react';
 
 export default function Landing() {
@@ -16,12 +15,10 @@ export default function Landing() {
       </h1>
       <h2>I’m a student developer.</h2>
       <div className="btn-group">
-        {/* Download CV */}
         <a href="/public/LewinElepResume.pdf" className="btn" download>
           Download CV
         </a>
 
-        {/* Scroll to Contact section */}
         <a href="#contact" className="btn">
           Contact Me
         </a>

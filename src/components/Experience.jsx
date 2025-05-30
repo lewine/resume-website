@@ -1,4 +1,3 @@
-// src/components/Experience.jsx
 import React, { useEffect, useRef } from 'react';
 
 const ENTRIES = [
@@ -47,8 +46,8 @@ export default function Experience() {
       },
       {
         root: null,
-        rootMargin: '-300px 0px -300px 0px',  // trigger 150px before entering bottom
-        threshold: 0                    // as soon as any part is visible
+        rootMargin: '-300px 0px -300px 0px',
+        threshold: 0                
       }
     );
 

@@ -1,4 +1,3 @@
-// src/components/Projects.jsx
 import React, { useState, useEffect } from 'react';
 
 const PROJECTS = [
@@ -21,7 +20,7 @@ const PROJECTS = [
   {
     title: 'Custom Language Interpreter',
     subtitle: 'Class Project',
-    image: null,  // no screenshot available
+    image: null, 
     description: [
       'Developed a full interpreter in C++ for a custom language with variables, arithmetic, conditionals, loops (FOR, WHILE), and SWITCH-case logic',
       'Implemented a recursive descent parser and linked control flow graph using dynamically allocated InstructionNode structures',
@@ -42,7 +41,6 @@ export default function Projects() {
 
   return (
      <section id="projects" className="projects-section">
-      {/* center the title above the carousel */}
       <h1
         className="section-title"
         style={{ textAlign: 'center', margin: '0 auto', maxWidth: '900px' }}
@@ -54,13 +52,11 @@ export default function Projects() {
         <button className="carousel-nav left" onClick={prev}>&larr;</button>
         <div className="carousel-viewport">
           {PROJECTS.map((p, i) => {
-            // calculate circular offset
             const raw = (i - current + count) % count;
             const offset = raw > count / 2 ? raw - count : raw;
             const isCenter = offset === 0;
 
-            // transform and layering
-            const translateX = offset * 20; // vw
+            const translateX = offset * 20; 
             const rotateY = isCenter ? 0 : offset < 0 ? 40 : -40;
             const scale = isCenter ? 1 : 0.5;
             const opacity = isCenter ? 1 : 0.5;

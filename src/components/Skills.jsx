@@ -1,4 +1,3 @@
-// src/components/Skills.jsx
 import React, { useEffect } from 'react';
 
 const SKILLS = [
@@ -27,7 +26,6 @@ export default function Skills() {
       };
       card.addEventListener('mousemove', onMouseMove);
       card.addEventListener('mouseleave', onMouseLeave);
-      // clean up
       return () => {
         card.removeEventListener('mousemove', onMouseMove);
         card.removeEventListener('mouseleave', onMouseLeave);
