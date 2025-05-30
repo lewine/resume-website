@@ -20,8 +20,8 @@
   }
  
   #particles-js {
-    position: absolute;     /* already in your CSS */
-    inset: 0;               /* shorthand for top/right/bottom/left = 0 */
+    position: absolute;   
+    inset: 0;              
     z-index: 10;
   }
   
@@ -61,7 +61,7 @@
 
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 120px; /* adjust for height of your fixed navbar */
+    scroll-padding-top: 120px; 
   }
 
 
@@ -97,7 +97,7 @@
   }
 
 
-  /* global-particles: full-page fixed background, no snap */
+
   #global-particles {
     position: absolute;
     top: 0;
@@ -105,7 +105,7 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 0;              /* behind Experience/Skills/etc */
+    z-index: 0;             
     scroll-snap-align: none;
   }
 
@@ -210,19 +210,18 @@
     padding: 120px 20px 60px;
   }
 
-  /* Match your site’s main section heading style */
+ 
   .experience-title {
-    font-family: 'Poppins', sans-serif;  /* same as body */
-    font-weight: 200;                    /* light weight, like your other headings */
-    font-size: 4rem;                     /* same as your Skills and Projects titles */
-    margin: 0;                           /* reset any browser defaults */
-    padding: 2rem 0 1rem 20px;           /* adjust top/bottom and 20px left indent */
-    color: var(--text);                  /* white */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;                  
+    font-size: 4rem;                   
+    margin: 0;                           
+    padding: 2rem 0 1rem 20px;           
+    color: var(--text);                  
   }
 
-  /* If you ever want to tweak the left indent globally: */
   .experience-title {
-    padding-left: 24rem;  /* change this value to move it left/right */
+    padding-left: 24rem;  
   }
 
 
@@ -276,7 +275,6 @@
     animation: slideInRight 0.5s ease-out forwards;
   }
 
-  /* initial state: hidden & shifted right */
   .timeline-entry {
     opacity: 0.2;
     transform: translateX(20px);
@@ -285,7 +283,6 @@
       transform 0.5s ease var(--delay, 0ms);
   }
 
-  /* when JS adds .animate-in: show and slide into place */
   .timeline-entry.animate-in {
     opacity: 1;
     transform: translateX(0);
@@ -293,15 +290,14 @@
 
   .timeline-entry {
     position: relative;
-    overflow: hidden;  /* clip the gradient to the box */
+    overflow: hidden;  
   }
 
-  /* before the content, draw a gradient panel */
   .timeline-entry::before {
     content: "";
     position: absolute;
     top: 0;
-    right: -100%;              /* start fully off to the left */
+    right: -100%;            
     width: 100%;
     height: 100%;
     background: linear-gradient(
@@ -310,12 +306,11 @@
       #0A192F 50%,
       transparent 70%
     );
-    transition: right 0.6s ease; /* slide-in timing */
+    transition: right 0.6s ease; 
   }
 
-  /* once the entry animates in, slide that gradient across */
   .timeline-entry.animate-in::before {
-    right: 100%;  /* move to the right, carrying the color wash across */
+    right: 100%;  
   }
 
 
@@ -398,6 +393,7 @@
 
 
   .contact-page {
+    font-family: 'Poppins', sans-serif; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -412,6 +408,30 @@
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 30px;
+  }
+
+  .contact-page,
+  .contact-page * {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+  }
+
+  /* Match your other section headings */
+  .contact-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;      /* same as other H1s */
+    font-size: 4rem;       /* or 3.5rem if you prefer */
+    margin-bottom: 2rem;
+  }
+
+  /* Inputs, textarea, labels, and button text */
+  .contact-form label,
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    font-family: inherit;   /* inherits Poppins */
+    font-weight: 300;       /* match your body copy weight */
+    font-size: 1rem;
   }
 
   form {
@@ -466,18 +486,16 @@
 
 
   
-  /* Projects.css */
   .section-title {
-    font-family: 'Poppins', sans-serif; /* or whatever your site uses */
-    font-size: 3.5rem;                   /* match your other sections */
-    font-weight: 200;                    /* light weight like Skills/Experience */
-    color: var(--text);                  /* your standard text color */
-    margin-bottom: 2rem;                 /* space below */
-    text-align: center;                  /* already centered by inline, but safe */
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;                  
+    font-weight: 200;                 
+    color: var(--text);               
+    margin-bottom: 2rem;             
+    text-align: center;               
   }
   
 
-  /* Container sets perspective for 3D effect */
   .carousel-container {
     position: relative;
     width: 100%;
@@ -487,7 +505,6 @@
     overflow: visible;
   }
 
-  /* Nav buttons */
   .carousel-nav {
     position: absolute;
     top: 50%;
@@ -507,7 +524,6 @@
   .carousel-nav.left  { left: 1rem; }
   .carousel-nav.right { right: 1rem; }
 
-  /* Viewport holds the cards */
   .carousel-viewport {
     position: relative;
     width: 100%;
@@ -520,7 +536,6 @@
     overflow: visible;
   }
 
-  /* Individual cards */
   .carousel-card {
     background: rgba(30,30,30,0.6);
     backdrop-filter: blur(5px);
@@ -581,7 +596,6 @@
     color: var(--background);
   }
 
-  /* Dot navigation */
   .carousel-dots {
     display: flex;
     justify-content: center;

@@ -9,7 +9,6 @@ import './index.css';
 
 function App() {
   useEffect(() => {
-    // initialize the global starfield once
     if (window.particlesJS?.load) {
       window.particlesJS.load(
         'global-particles',
@@ -21,7 +20,6 @@ function App() {
 
   return (
     <>
-      {/* global stars behind everything */}
       <div id="global-particles" className="absolute inset-0 pointer-events-none"
 />
 
