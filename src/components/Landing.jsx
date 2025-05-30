@@ -1,0 +1,31 @@
+// src/components/Landing.jsx
+import { useEffect } from 'react';
+
+export default function Landing() {
+  useEffect(() => {
+    window.particlesJS.load('particles-js', '/particles.json', () =>
+      console.log('particles loaded')
+    );
+  }, []);
+
+  return (
+    <section id="home" className="home-content">
+      <div id="particles-js" className="absolute inset-0" />
+      <h1>
+        Hi, I’m <span className="highlight">Lewin</span>.
+      </h1>
+      <h2>I’m a student developer.</h2>
+      <div className="btn-group">
+        {/* Download CV */}
+        <a href="/public/LewinElepResume.pdf" className="btn" download>
+          Download CV
+        </a>
+
+        {/* Scroll to Contact section */}
+        <a href="#contact" className="btn">
+          Contact Me
+        </a>
+      </div>
+    </section>
+  );
+}
