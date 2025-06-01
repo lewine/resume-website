@@ -13,7 +13,6 @@ function App() {
       window.particlesJS.load(
         'global-particles',
         '/particles-stars.json',
-        () => console.log('✨ global stars loaded')
       );
     }
   }, []);

@@ -35,7 +35,7 @@ export default function Skills() {
 
   return (
     <section id="skills" className="skills-content">
-      <h1>Skills</h1>
+      <h1 className="skills-title">Skills</h1>
       <div className="skills-grid">
         {SKILLS.map(skill => (
           <div key={skill.name} className="skill-card">

@@ -2,8 +2,7 @@ import { useEffect } from 'react';
 
 export default function Landing() {
   useEffect(() => {
-    window.particlesJS.load('particles-js', '/particles.json', () =>
-      console.log('particles loaded')
+    window.particlesJS.load('particles-js', '/particles.json'
     );
   }, []);
 

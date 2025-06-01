@@ -25,6 +25,10 @@ export default function Experience() {
   const containerRef = useRef(null);
 
   useEffect(() => {
+    if (!containerRef.current) {
+      return;
+    }
+
     const entries = Array.from(
       containerRef.current.querySelectorAll('.timeline-entry')
     );
@@ -55,13 +59,15 @@ export default function Experience() {
     return () => observer.disconnect();
   }, []);
 
-   return (
+  return (
     <section id="experience">
-      <h1 className="experience-title">Experience</h1>
+      <div className="experience-header">
+        <h1 className="experience-title">Experience</h1>
+      </div>
       <div
         className="experience-content"
         ref={containerRef}
-        style={{ padding: '4rem 0', margin: '0 auto', maxWidth: '900px' }}
+        style={{ margin: '0 auto', maxWidth: '900px' }}
       >
         {ENTRIES.map((entry, idx) => (
           <div key={idx} className="timeline-entry">
