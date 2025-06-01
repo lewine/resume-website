@@ -18,7 +18,6 @@
     color: var(--text);
     background-color: var(--background);
     overflow-x: hidden;
-    overflow-y: auto;
     position: relative;
   }
  
@@ -32,7 +31,6 @@
     position: relative;
     z-index: 1;
     height: 100vh;
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -301,7 +299,7 @@
 
   .timeline-entry {
     position: relative;
-    overflow: hidden;  
+    overflow-x: hidden;  
   }
 
   .timeline-entry::before {
@@ -356,7 +354,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    overflow: hidden;
+    overflow-x: hidden;
     transition: background-color 0.2s ease;
   }
   
@@ -505,7 +503,7 @@
     max-width: 1500px;
     margin: 0 auto;
     padding: 3rem 0;
-    overflow: visible;
+    overflow-x: visible;
   }
 
   .carousel-nav {
@@ -536,7 +534,7 @@
     justify-content: center;
     align-items: center;
     perspective: 1000px;
-    overflow: visible;
+    overflow-x: visible;
   }
 
   .carousel-card {
@@ -646,7 +644,7 @@
     width: 100%;
     max-width: 1200px;
     max-height: 800px;
-    overflow: hidden;
+    overflow-x: hidden;
     border-radius: 8px;
     margin-bottom: 1rem;
   }
@@ -905,7 +903,7 @@
 
   .carousel-container {
     height: 450px !important;
-    overflow: visible !important;     
+    overflow-x: visible !important;     
     transform: none !important;       
     min-height: auto !important;     
     min-width: auto;
@@ -942,10 +940,6 @@
     transform: rotateY(–15deg) scale(0.9) !important;
   }
 
-
-  .carousel-card .split-left {
-    overflow-y: auto !important;    
-  }
 
   .carousel-card .project-card-buttons {
     display: flex !important;          
