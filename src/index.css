@@ -19,6 +19,7 @@
     background-color: var(--background);
     overflow-x: hidden;
     position: relative;
+    -webkit-overflow-scrolling: touch;
   }
  
   #particles-js {
