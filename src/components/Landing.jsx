@@ -14,7 +14,7 @@ export default function Landing() {
       </h1>
       <h2>I’m a student developer.</h2>
       <div className="btn-group">
-        <a href="/public/LewinElepResume.pdf" className="btn" download>
+        <a href="/LewinElepResume.pdf" className="btn" download>
           Download CV
         </a>
 
